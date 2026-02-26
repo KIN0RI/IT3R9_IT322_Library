@@ -25,7 +25,7 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-
+#WALAY name sa member sir kai way name sa erd nako.
 class Member(models.Model):
     contact_number = models.CharField(max_length=20)
     library = models.ForeignKey(Library, on_delete=models.CASCADE)
