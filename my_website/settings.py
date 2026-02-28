@@ -120,14 +120,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-I can see the problem — you're missing the CORS configuration at the bottom of settings.py. The middleware is there but you never told Django which origins to allow!
+CORS_ALLOW_ALL_ORIGINS = True
 
-Add This to the Bottom of Your settings.py
-python# ADD THESE LINES AT THE VERY BOTTOM of settings.py
-
-CORS_ALLOW_ALL_ORIGINS = True  # ← temporary, to test first
-
-# Also add these so POST/PUT/DELETE work properly
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
